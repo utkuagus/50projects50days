@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.half {
+    position: absolute;
+    left:0;
+    height: 50vh;
+    width: 100%;
+}
+
+.upper-body {
+    top:0;
+    background-color: lightblue;
+    z-index: -1;
+}
+
+.lower-body {
+    top:50%;
+    background-color: steelblue;
+    z-index: -1;
+}
+
+.nav {
+    height: 70px;
+    width: 75px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px #333;
+}
+
+.nav.active {
+    width: 350px;
+}
+
+.bar-container {
+    position: relative;
+    cursor: pointer;
+    height: 24px;
+    width: 20px;
+    margin: 18px;
+}
+
+.bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 100%;
+    background-color: steelblue;
+    transition: all 0.5s;
+}
+
+.upper-bar {
+    transform: translate(-50%, calc(-50% - 6px));
+}
+
+.lower-bar {
+    transform: translate(-50%, calc(-50% + 6px));
+}
+
+.option-container {
+    display: flex;
+    flex: 0;
+    text-transform: capitalize;
+    height: 100%;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav.active .option-container {
+    flex: 2;
+}
+
+
+.nav.active .bar-container .upper-bar{
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nav.active .bar-container .lower-bar{
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

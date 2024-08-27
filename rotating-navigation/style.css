@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+    --circle-radius: 100px;
+    --transform-duration: 0.7s;
+    --delay-duration: 0.3s;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.circle {
+    background-color: crimson;
+    width: calc(2 * var(--circle-radius));
+    height: calc(2 * var(--circle-radius));
+    border-radius: 50%;
+    position: fixed;
+    top:calc(-1 * var(--circle-radius));
+    left:calc(-1 * var(--circle-radius));
+    transform-origin: center;
+    transition: transform var(--transform-duration);
+    z-index: 1;
+}
+
+.button {
+    position: absolute;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #fff;
+    font-size: 26px;
+}
+
+.open {
+    position: absolute;
+    top:75%;
+    left:75%;
+    transform: translate(-100%,-50%);
+}
+
+.close {
+    position: absolute;
+    top:75%;
+    left:25%;
+    transform: translate(-50%,-100%);
+}
+
+.text-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 65px;
+    background-color: #fff;
+    transform-origin: top left;
+    transition: transform var(--transform-duration);
+}
+
+.text {
+    height: 100%;
+    width: 55%;
+}
+
+img {
+    width:100%;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+i {
+    margin-top: 0;
+}
+
+p {
+    font-size:16px;
+    line-height: 150%;
+}
+
+.nav-active > .circle{
+    transform: rotate(-90deg);
+}
+
+.nav-active > .text-container{
+    transform: rotate(-20deg);
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 45px;
+    transform: translateX(-100%);
+    transition: transform calc(var(--transform-duration) - var(--delay-duration));
+}
+
+.nav-active > nav {
+    transition-delay: var(--delay-duration);
+    transform: translateX(40px);
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    color: #fff;
+}
+
+nav ul li {
+    margin-bottom: 40px;
+    transform: translateX(0);
+    transition: transform calc(var(--transform-duration) - var(--delay-duration));
+}
+
+.nav-active > nav ul li {
+    transition-delay: var(--delay-duration);
+}
+
+.nav-active > nav ul li + li {
+    transform: translateX(15px);
+}
+
+.nav-active > nav ul li + li + li {
+    transform: translateX(30px);
+}
+
+nav ul li i {
+    font-size: 18px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 15px;
+    font-size: 16px;
+}

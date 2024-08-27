@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+:root {
+    --border-color: #144fc6;
+    --fill-color: #6ab3f8;
+}
+
+.tube {
+    border: 5px solid var(--border-color);
+    color: var(--border-color);
+    user-select: none;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.filled {
+    background-color: var(--fill-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.empty {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.empty h2, .empty p {
+    margin: 0;
+}
+
+.input .filled {
+    color: #fff;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 360px;
+}
+
+.output .tube {
+    position: relative;
+    height: 100%;
+    width: 150px;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.output .filled {
+    height: 50%;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.output .empty {
+    flex: 1;
+    height: 0;
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input .tube-container {
+    display: flex;
+}
+
+.input .tube {
+    height: 95px;
+    width: 45px;
+    border-radius: 0 0 10px 10px;
+    margin: 5px;
+    font-size:18px;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: dodgerblue;
+}

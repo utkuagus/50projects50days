@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --active-color: #3498db;
+    --passive-color: #3f3f3f34;
+    --circle-radius: 30px;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.button {
+    color:#fff;
+    background-color: var(--passive-color);
+    cursor: not-allowed;
+    user-select: none;
+    width: 85px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.active {
+    background-color: var(--active-color);
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    margin-top: 25px;
+}
+
+.bar {
+    position: absolute;
+    left: var(--circle-radius);
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - calc(2 * var(--circle-radius)));
+    height: 6px;
+    background-color: var(--passive-color);
+    z-index: -1;
+}
+
+.bar.progressed {
+    width: 0;
+    background-color: var(--active-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.circle-container {
+    position: relative;
+    margin-bottom: 25px;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle {
+    width: var(--circle-radius);
+    height: var(--circle-radius);
+    border: 3px solid var(--passive-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: border 0.3s ease-in-out;
+}
+
+.circle.active {
+    border-color: var(--active-color);
+}
