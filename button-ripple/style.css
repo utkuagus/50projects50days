@@ -1,0 +1,46 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.button {
+    background-color: purple;
+    text-transform: uppercase;
+    color: #fff;
+    height: 60px;
+    width: 140px;
+    font-size: 16px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #fff;
+    z-index: 1;
+    opacity: 1;
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%,-50%) scale(3);
+        opacity: 0;
+    }
+
+}
