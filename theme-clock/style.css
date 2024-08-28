@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    transition: all 0.4s;
+}
+
+*, .inverted .dark {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark, .inverted, .inverted * {
+    background-color: #000;
+    color: #fff;   
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.mode {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 0;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+}
+
+.date > * {
+    margin: 0 3px;
+}
+
+.day {
+    text-transform: uppercase;
+}
+
+.monthday {
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.clock {
+    height: 320px;
+}
+
+.clock > * {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+.bar {
+    width: 3px;
+    transform-origin: bottom center;
+    transform: translate(-50%,-100%) rotate(90deg);
+}
+
+.hour {
+    height: 70px;
+    transform: translate(-50%,-100%) rotate(190deg);
+}
+
+.minute {
+    height: 130px;
+}
+
+.second {
+    height: 130px;
+    background-color: red;
+}
+
+.circle {
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle.small {
+    width: 5px;
+    height: 5px;
+    z-index: 2;
+
+}
+
+.circle.big {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
