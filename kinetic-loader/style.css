@@ -1,0 +1,35 @@
+body {
+    background-color: darkslategray;
+}
+
+.triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border: 60px solid;
+}
+
+.left {
+    border-color: transparent transparent transparent #fff;
+    animation: frame 2s linear infinite;
+}
+
+.bottom {
+    border-color: transparent transparent #fff transparent;
+    animation: frame 2s linear infinite 0.5s;
+}
+
+@keyframes frame {
+    0%, 25% {
+        transform: translate(-50%, -50%);
+    }
+    50%, 75% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
