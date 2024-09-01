@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    word-spacing: 3px;
+    margin: 0;
+}
+
+.inverted {
+    color: #fff;
+    background-color: #222;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    background-color: #fff;
+    position: fixed;
+    z-index: 2;
+    transition: all 0.3s linear;
+}
+
+nav.inverted {
+    height: 70px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li {
+    padding: 0;
+}
+
+.active {
+    margin: 0;
+}
+
+ul li a {
+    color: #000;
+    transform: translateY(0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 12px;
+    transition: all 0.3s linear;
+}
+
+.inverted a {
+    color: #fff;
+}
+
+a:hover, a:active, .active, .inverted .active {
+    color: crimson;
+    transform: translateY(1px);
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.header::before {
+    content:"";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.header > * {
+    z-index: 1;
+}
+
+.header .header-title {
+    font-size: 50px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 22px;
+}
+
+.content {
+    width: 65%;
+    margin: 20px auto 45px auto;
+    line-height: 200%;
+}
+
+.content p {
+    font-size: 18px;
+    color: #777;
+}
