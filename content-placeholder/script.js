@@ -1,12 +1,18 @@
 const header = document.querySelector(".header")
 const title = document.querySelector(".title")
 const info = document.querySelector(".info")
+const infoRow = document.querySelectorAll(".info-row")
 const nameEl = document.querySelector(".name")
 const date = document.querySelector(".date")
 const profileImg = document.querySelector(".profile-img")
-const infoRow = document.querySelectorAll(".info-row")
 
-const elements = [header, title, nameEl, date, profileImg]
+const renderList = [header, title, nameEl, date, profileImg]
+
+const addRender = el => el.classList.add("render")
+const removeRender = el => el.classList.remove("render")
+
+renderList.forEach(addRender)
+infoRow.forEach(addRender)
 
 setTimeout(getData, 2500)
 
@@ -17,11 +23,7 @@ function getData() {
     nameEl.innerHTML = "John Doe"
     date.innerHTML = "Oct 26, 2020"
     profileImg.innerHTML = '<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />'
-    infoRow.innerHTML = ""
-    
-    elements.forEach(e => e.classList.remove("render"))
-    infoRow.forEach(e => e.classList.remove("render"))
-}
 
-elements.forEach(e => e.classList.add("render"))
-infoRow.forEach(e => e.classList.add("render"))
+    renderList.forEach(removeRender)
+    infoRow.forEach(removeRender)
+}
