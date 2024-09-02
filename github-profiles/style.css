@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.profile {
+    display: none;
+    padding:35px;
+    border-radius: 16px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: midnightblue;
+    height: 100vh;
+    margin: 0;
+}
+
+.purple {
+    background-color: rebeccapurple;
+    color: #fff;
+}
+
+.search {
+    height: 60px;
+    width: 700px;
+    font-size: 18px;
+    padding-left: 16px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.search::placeholder {
+    color: #fff;
+    opacity: 0.6;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 0;
+    background-color: midnightblue;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}
+
+.profile-info {
+    flex-direction: column;
+}
+
+.profile-info .name {
+    margin: 0;
+    margin-bottom:12px;
+}
+
+.detail > * {
+    margin-right: 25px;
+}
+
+.detail .subject {
+    font-weight: 800;
+    margin-left: 6px;
+}
+
+.repos {
+    margin-top: 12px;
+}
+
+.repo-item {
+    padding: 4px;
+    margin-right: 5px;
+    font-size: 12px;
+    background-color: midnightblue;
+    color: #fff;
+    text-decoration: none;
+}
+
