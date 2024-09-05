@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: rebeccapurple;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div[class$="container"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    padding: 16px;
+}
+
+.container::before {
+    opacity: 0.3;
+}
+
+.title {
+    text-align: center;
+}
+
+.password-container {
+    position: relative;
+    height: 52px;
+    margin: 15px 0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-container::before {
+    opacity: 0.5;
+}
+
+.password {
+    font-size: 20px;
+}
+
+.clipboard {
+    height: 100%;
+    width: 40px;
+    font-size: 20px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+input {
+    user-select: none;
+}
+
+.generator {
+    height: 36px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.btn {
+    background-color: rebeccapurple;
+    outline: 0;
+    border: 0;
+    color: #fff;
+}
