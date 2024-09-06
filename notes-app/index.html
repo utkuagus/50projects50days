@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Notes App</title>
+    </head>
+    <body class="flex flex-column">
+        <button class="add"><i class="fas fa-plus"></i> Add Note</button>
+        <div class="note-container flex flex-wrap">
+            <div class="note flex flex-column">
+                <div class="header flex justify-end">
+                    <button class="edit"><i class="fas fa-edit"></i></button>
+                    <button class="remove"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                <textarea class="content"></textarea>
+                <div class="text"></div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
