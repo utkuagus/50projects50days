@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cycle-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.countdown-container {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.countdown {
+    color: lightblue;
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 90px;
+    transform: translate(-50%, -50%) rotate(130deg);
+    transition: all 0.5s linear;
+}
+
+.countdown.mid {
+    transform: translate(-50%, -50%);
+}
+
+.countdown.end {
+    transform: translate(-50%, -50%) rotate(-130deg);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    font-size: 36px;
+}
+
+.ready {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
