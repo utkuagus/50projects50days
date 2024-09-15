@@ -1,0 +1,50 @@
+.flex {
+    display: flex;
+}
+
+.flex.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.pixel {
+    height: 16px;
+    width: 16px;
+    background-color: #333;
+    margin: 2px;
+    transition: all .7s ease-in-out;
+}
+
+.pixel.active {
+    transition: none;
+}
+
+.pixel.red {
+    background-color: red;
+}
+
+.pixel.blue{
+    background-color: dodgerblue;
+}
+
+.pixel.green {
+    background-color: limegreen;
+}
+
+.pixel.purple {
+    background-color: rebeccapurple;
+}
+
+.pixel.orange {
+    background-color: orangered;
+}
