@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+.pokemon-container {
+    width: 60vw;
+}
+
+.pokemon {
+    height: 210px;
+    width: 120px;
+    border-radius: 6px;
+    background-color: limegreen;
+    box-shadow: 0 0 5px #222;
+    padding: 12px 8px;
+    margin: 5px;
+}
+
+.pokemon.flex > * {
+    margin: 6px;
+}
+
+.circle {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .8;
+}
+
+.label {
+    padding: 6px;
+    border-radius: 3px;
+    background-color: rgba(100, 100, 100, 0.3);
+}
