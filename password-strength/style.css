@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.center-x {
+    justify-content: center;
+}
+
+.flex.center-y {
+    align-items: center;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    height: calc(100vh + 40px);
+    width: calc(100vw + 40px);
+    background: center / cover no-repeat url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b');
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 36px;
+    width: 350px;
+}
+
+.header {
+    margin: 0;
+}
+
+.form {
+    width: 100%;
+}
+
+.form label {
+    margin: 20px 0 5px 0;
+}
+
+.form input {
+    padding: 10px;
+}
+
+.form #submit {
+    margin-top: 30px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
